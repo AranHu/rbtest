@@ -7,18 +7,30 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
-<h2>Add acomment:</h2>
-<%= form_for([@article, @article.comments.build]) do |f| %>
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
     <p>
-      <%= f.label :commenter %><br>
-      <%= f.text_field :commenter %>
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
     </p>
+
     <p>
-      <%= f.label :body %><br>
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </p>
+<% end %>
+<h2>Add a comment</h2>
+<%=form_for([@article, @article.comments.build]) do |f|%>
+    <P>
+      <%= f.label :commenter %> <br/>
+      <%= f.text_field :commenter %>
+    </P>
+    <p>
+      <%= f.label :body %> <br/>
       <%= f.text_area :body %>
     </p>
     <p>
       <%= f.submit %>
     </p>
-<% end %>
+<%	 end  %>
 <%= link_to 'Back', articles_path %>|<%= link_to 'Edit',edit_article_path(@article) %>
