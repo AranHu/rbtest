@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>meetup</title>
-  <link rel="stylesheet" type="text/css" href="../css/common.css">
-  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/common.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/index.css">
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="../js/jquery.anystretch.min.js"></script>
-</head>
-<body class="index">
-<div class="navbar clearfix">
+  <script src="../../../public/js/jquery.anystretch.min.js"></script>
+ </head>
+<body>
+  <div class="navbar clearfix">
   <div class="container">
-    <a class="navbar-brand" href="/">
-      FTD
+    <a class="navbar-brand" href="/app/assets/images">
+      Meetup
     </a>
     <ul class="nav left">
-      <li><%= link_to 'Articles', articles_path %></li>
-      <li><a href="#">Users</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">placeholder</a></li>
     </ul>
     <ul class="nav right">
       <li><a href="#">login</a></li>
@@ -25,16 +25,18 @@
     </ul>
   </div>
 </div>
-<div class="home-banner" data-stretch="images/hero.jpg"></div>
-
+<div class="container">
+  <h1>About</h1>
+</div>
 <div class="footer">
   <div class="container">
+    footer
   </div>
 </div>
 
 <script type="text/javascript">
 
-    $('.home-banner').anystretch();
+  $('.home-banner').anystretch();
 </script>
 </body>
 </html>

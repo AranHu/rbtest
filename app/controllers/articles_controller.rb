@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
- http_basic_authenticate_with name: "naive",password: "naive", except:[:index,:show]
+ # http_basic_authenticate_with name: "naive",password: "naive", except:[:index,:show]
 
 
   # 这个路由真有意思啊
