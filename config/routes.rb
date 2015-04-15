@@ -19,6 +19,11 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+
+
+
+
+  get '/issues/:id' => "issues#show"
   # end
   #
   # Example resource route with options:
