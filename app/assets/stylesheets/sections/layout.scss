@@ -2,15 +2,12 @@
   background: #222;
   position: relative;
   z-index: 1000;
+  a {
+    color: #fff;
+  }
 }
 
-.index .navbar {
-	background: transparent;
-}
 
-.navbar a {
-  color: #fff;
-}
 .navbar a:hover {
   color: #c0865e;
 }
