@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -20,10 +21,30 @@ Rails.application.routes.draw do
   end
 
 
+  # resources :welcome
+  get 'welcome' => 'welcome#index', :as => 'welcome' #还是这样直接写的好
 
 
 
-  get '/issues/:id' => "issues#show"
+
+  #issues
+  # get 'issues/new' => "issues#new" # 主要这一行要写在 get '/issues/:id' 的上面
+  # # get '/issues/:id' => "issues#show"
+  # get 'issues/:id' => "issues#show", :as => "issue" #定义别名
+  # delete 'issues/:id' => 'issues#destroy'
+  # get 'issues' => 'issues#index', :as => 'issues'
+  # post 'issues' => 'issues#create'
+  # get 'issues/:id/edit' => 'issues#edit', :as => 'edit_issue'
+  # patch 'issues/:id' => 'issues#update'
+
+  resources :issues
+
+
+
+  # comments
+  post '/issues/:issue_id/comments' => "icomments#create"
+
+
   # end
   #
   # Example resource route with options:

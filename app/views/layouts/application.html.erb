@@ -5,13 +5,15 @@
   <title>My RoR</title>
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
 </head>
 <body class="<%= params[:controller] + '-' + params[:action]%>">
 <div class="navbar clearfix">
   <div class="container">
-    <a class="navbar-brand" href="/app/assets/images">
-      NAIVE
-    </a>
+    <!--<a class="navbar-brand" href="#">-->
+      <!--NAIVE-->
+    <!--</a>-->
+    <%= link_to 'Home' , welcome_path , class:"navbar-brand"%>
     <ul class="nav left">
       <!--<li><a href="about.html">About</a></li>-->
       <li><%= link_to 'Article' , articles_path %></li>
