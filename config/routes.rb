@@ -24,7 +24,8 @@ Rails.application.routes.draw do
   # resources :welcome
   get 'welcome' => 'welcome#index', :as => 'welcome' #还是这样直接写的好
 
-
+  get "signup" => "users#signup", :as => "signup"
+  resources :users, only: [:create] #这个是怎么个用法
 
 
   #issues
