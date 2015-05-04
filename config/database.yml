@@ -18,6 +18,8 @@ default: &default
 development:
 #  <<: *default
 #  database: db/development.sqlite3
+
+#mysql配置
   adapter: mysql2
   database: db_name_dev
   username: root
